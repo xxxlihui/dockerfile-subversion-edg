@@ -7,8 +7,8 @@ WORKDIR /var/sytech
 RUN addgroup -S svn && adduser -S svn svn
 USER svn
 
-RUN  \
-     curl -o svn.tar https://file.seater.cn/svn/CollabNetSubversionEdge-5.2.2_linux-x86_64.tar \
+RUN  apk add curl \
+    && curl -o svn.tar https://file.seater.cn/svn/CollabNetSubversionEdge-5.2.2_linux-x86_64.tar \
     && tar -xvf svn.tar \
     && rm -f svn.tar
 
