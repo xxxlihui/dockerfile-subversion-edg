@@ -5,7 +5,7 @@ MAINTAINER lhn <cabopkll@sina.com>
 WORKDIR /var/sytech
 USER svn
 
-RUN /
+RUN  \
     && curl -o svn.tar https://file.seater.cn/svn/CollabNetSubversionEdge-5.2.2_linux-x86_64.tar \
     && tar -xvf svn.tar \
     && rm -f svn.tar
@@ -13,4 +13,6 @@ RUN /
 WORKDIR /var/sytech/csvn
 
 CMD ["bin/csvn start"]
+
+
 
