@@ -4,7 +4,7 @@ MAINTAINER lhn <cabopkll@sina.com>
 
 WORKDIR /var/sytech
 
-RUN addgroup -r svn && adduser -r -g svn svn
+RUN addgroup -S svn && adduser -S svn svn
 USER svn
 
 RUN  \
